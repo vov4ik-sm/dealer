@@ -1,0 +1,48 @@
+<?php
+require_once'connect.php';
+?>
+<form action="client_lada.php" method="GET">
+ Автор:<select name="NameAuthor">
+ <?php
+$result=mysqli_query($link,"SELECT
+  brand.brand
+FROM brand");
+$rows=mysqli_fetch_all($result,MYSQLI_ASSOC);
+foreach ($rows as $row)
+{
+	echo"<option>". ($row['brand']."</option>");
+}
+?>
+ </select><br>
+<input type="submit" name="submit" value="Поиск"><br>
+</form>
+<?php
+if($_GET['submit'])
+{
+	$result=mysqli_query($link,"SELECT
+  clients.id_clients,
+  brand.brand
+FROM clients
+  INNER JOIN product
+    ON clients.id_product = product.id_product
+  INNER JOIN brand
+    ON product.id_brand = brand.id_brand
+WHERE brand.brand ='$_GET[NameAuthor]'");
+$rows=mysqli_fetch_all($result,MYSQLI_ASSOC);
+echo '<table border="1">';
+echo '<tr>';
+echo '<th>'."brand".'</th>';
+echo '<th>'."id_clients".'</th>';
+echo '</tr>';
+foreach ($rows as $row)
+{
+	echo '<tr>';
+	echo '<td>'.$row['brand'].'</td>';
+	echo '<td>'.$row['id_clients']." ".$row['FirstName'].'</td>';
+	echo '</tr>';
+	
+
+}
+echo '</table>';
+}
+?>

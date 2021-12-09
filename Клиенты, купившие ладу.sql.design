@@ -21,7 +21,7 @@
       <Data>
         <StatementType>Select</StatementType>
         <ActiveQuery>0</ActiveQuery>
-        <SubQuery Id="0" Open="0" LocationX="-405" LocationY="12" Scale="1">
+        <SubQuery Id="0" Open="0" LocationX="-156.249993791183" LocationY="34.3749986340603" Scale="0.96">
           <PageOptions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <HorizontalOverlap>0</HorizontalOverlap>
             <VerticalOverlap>0</VerticalOverlap>
@@ -39,16 +39,17 @@
             </PaperSize>
           </PageOptions>
           <Tables>
-            <Table Name="product" Left="40" Top="40" Width="203.0838" Height="152" Collapsed="False" />
-            <Table Name="brand" Left="-224" Top="48" Width="203.0838" Height="90" Collapsed="False" />
+            <Table Name="clients" Left="40" Top="40" Width="220.1996" Height="206" Collapsed="False" />
+            <Table Name="product" Left="321" Top="68" Width="203.0838" Height="152" Collapsed="False" />
+            <Table Name="brand" Left="584" Top="98" Width="203.0838" Height="90" Collapsed="False" />
           </Tables>
         </SubQuery>
       </Data>
     </View>
-    <View Name="Code" Visible="True">
+    <View Name="Code" Active="True" Visible="True">
       <Data />
     </View>
-    <View Name="Data" Active="True" Visible="True" />
+    <View Name="Data" Visible="True" />
     <View Name="Profiler" Visible="False" />
     <View Name="PivotGrid" Visible="False" />
   </Views>
