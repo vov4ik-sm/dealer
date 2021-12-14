@@ -2,8 +2,12 @@
 require_once'connect.php';
 ?>
 <form action="Запрос_delete_client.php" method="GET">
- Автор:<input type="text" name="NameAuthor"><br>
-<input type="submit" name="submit" value="Удалить"><br>
+<p>Запрос_delete_client</p>
+ Введите фамилию клиента:<input type="text" name="NameAuthor"><br>
+<input type="submit" name="submit" value="Удалить из бд"><br>
+</form>
+</form><form method="post" action="http://dealer.ru/Main.php">
+<input type="submit" name="submitButton" value="Menu" />
 </form>
 <?php
 if($_GET['submit'])

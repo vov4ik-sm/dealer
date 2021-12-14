@@ -8,7 +8,7 @@ require_once'connect.php';
 </form>
 </form><form method="post" action="http://dealer.ru/Main.php">
 <input type="submit" name="submitButton" value="Menu" />
-<p>Автомобили с выбранным количеством мест</p>
+Автомобили с выбранным количеством мест
 </form>
 <?php
 if($_GET['submit'])
